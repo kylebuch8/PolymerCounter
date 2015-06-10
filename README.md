@@ -1,5 +1,11 @@
 #PolymerCounter
 
+To run this example you'll need npm, bower and gulp installed globally. Then run the following command.
+```
+npm install && bower install
+gulp
+```
+
 I was really struggling with Polymer 1.0 and the firebase-element. I wasn't having any issues with pulling data from Firebase, I was having issues with updating data in Firebase. I created this sample application to show how you can click on a div and have it update a counter.
 
 The key to getting this to work was using:
