@@ -1,0 +1,19 @@
+{
+  "name": "PolymerCounter",
+  "version": "0.0.0",
+  "authors": [
+    "Kyle Buchanan <kylebuch8@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~1.0.3",
+    "firebase-element": "GoogleWebComponents/firebase-element#~1.0.1"
+  }
+}

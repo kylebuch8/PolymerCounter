@@ -1,0 +1,33 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/firebase-element/firebase.html">
+<link rel="import" href="../bower_components/firebase-element/firebase-collection.html">
+
+<dom-module id="counter-app">
+    <style>
+        :host div {
+            margin: 30px;
+        }
+    </style>
+
+    <template>
+        <firebase-collection location="https://polymercounter.firebaseio.com/users" data="{{users}}"></firebase-collection>
+        <template is="dom-repeat" items="{{users}}">
+            <div on-tap="levelUp">
+                <span>{{item.name}}</span> - <span>{{item.level}}</span>
+            </div>
+        </template>
+    </template>
+</dom-module>
+
+<script>
+
+    Polymer({
+        is: 'counter-app',
+
+        levelUp: function (event) {
+            event.model.item.level += 1;
+            this.set('users.' + event.model.index, event.model.item);
+        }
+    });
+
+</script>
